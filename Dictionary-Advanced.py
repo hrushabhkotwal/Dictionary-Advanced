@@ -12,7 +12,7 @@ from difflib import get_close_matches
 def printDef(pmaterial):
     print("Meaning:")
     print(pmaterial + "\n")
-    
+
 def recheck(rword):  # Taking care of case sensitive words
     if rword.title() in dataDictionary:
         return(rword.title())
@@ -21,17 +21,17 @@ def recheck(rword):  # Taking care of case sensitive words
     elif rword.upper() in dataDictionary:
         return(rword.upper())
     else:
-        global flag 
+        global flag
         flag = 4
-        
-def findDefinition(word): 
+
+def findDefinition(word):
     global flag
     wflag = "True"
     nflag = "True"
     if word in dataDictionary:
         printDef(dataDictionary[word])
     else:
-        
+
         result = recheck(word)
         if flag == 4:
             tlist = get_close_matches(word,dataDictionary.keys())
@@ -45,7 +45,7 @@ def findDefinition(word):
                         wflag = "False"
                     elif YorN == "N" or YorN =="n":
                         print("The word that you have entered is incorrect.\nPlease recheck...")
-                        wflag = "False"                     
+                        wflag = "False"
                     else:
                         print("\nPlease enter Y or N")
                         wflag = "True"
@@ -77,9 +77,4 @@ while exitFlag =="False":
     elif toContinue =="Y" or toContinue == "y":
         nflag = "False"
 input("Press enter to exit")
-        
-    
-    
-    
-    
-    
+         
