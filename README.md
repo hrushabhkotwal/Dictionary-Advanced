@@ -1,4 +1,4 @@
-Dictionary-Advanced
+#Dictionary-Advanced
 
 Make sure to place the Dictionary-Advanced.json in the same directory as the Dictionary-Advanced.py or Dictionary-Advanced.exe.
 
